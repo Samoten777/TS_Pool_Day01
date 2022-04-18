@@ -8,15 +8,16 @@ Complete the first TypeScript tutorial provived by PoC Innovation
 
 ### Installation
 
-Install all dependencies listed in the package.json file
+Install all dependencies listed in the package.json file with the command
+```shell
+npm install
+```
 
-### Quickstart
+### Quickstart / Usage
 
-[Explain how to run this project]
-
-### Usage
-
-[Explain how to use this project]
+```shell
+npm run start
+```
 
 ## Get involved
 
