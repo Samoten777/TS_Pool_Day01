@@ -1,0 +1,28 @@
+{
+  "name": "ts_day01",
+  "version": "1.0.0",
+  "description": "hello world",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samoten777/TS_Pool_Day01.git"
+  },
+  "keywords": [
+    "TypeScript"
+  ],
+  "author": "Samoten777",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samoten777/TS_Pool_Day01/issues"
+  },
+  "homepage": "https://github.com/Samoten777/TS_Pool_Day01#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.24",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
