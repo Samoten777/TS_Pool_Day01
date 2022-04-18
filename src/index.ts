@@ -1,4 +1,4 @@
-import {helloName} from "./helloName";
+import {router} from "./artistsBook/router";
 
 
-helloName();
+router();
