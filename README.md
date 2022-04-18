@@ -1,18 +1,14 @@
 > If you see this section, you've just created a repository using [PoC Innovation's Open-Source project template](https://github.com/PoCInnovation/open-source-project-template). Check the [getting started guide](./.github/getting-started.md).
 
-# [PROJECT'S NAME]
+# TypeScript day 01
 
-[Project's description]
-
-## How does it work?
-
-[Explain how this project is working]
+Complete the first TypeScript tutorial provived by PoC Innovation
 
 ## Getting Started
 
 ### Installation
 
-[Explain how to install all of the project's dependencies]
+Install all dependencies listed in the package.json file
 
 ### Quickstart
 
@@ -31,11 +27,11 @@ If you're interested in how the project is organized at a higher level, please c
 ## Our PoC team :heart:
 
 Developers
-| [<img src="https://github.com/MrZalTy.png?size=85" width=85><br><sub>[Developer's name]</sub>](https://github.com/MrZalTy) | [<img src="https://github.com/MrZalTy.png?size=85" width=85><br><sub>[Developer's name]</sub>](https://github.com/MrZalTy) | [<img src="https://github.com/MrZalTy.png?size=85" width=85><br><sub>[Developer's name]</sub>](https://github.com/MrZalTy)
-| :---: | :---: | :---: |
+| [<img src="https://github.com/Samoten777.png?size=85" width=85><br><sub>[Laure Gagner]</sub>](https://github.com/Samoten777)
+| :---: |
 
 Manager
-| [<img src="https://github.com/adrienfort.png?size=85" width=85><br><sub>[Manager's name]</sub>](https://github.com/adrienfort)
+| [<img src="https://github.com/adrienfort.png?size=85" width=85><br><sub>[Adrien Fort]</sub>](https://github.com/adrienfort)
 | :---: |
 
 <h2 align=center>
