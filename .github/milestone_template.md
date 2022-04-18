@@ -2,26 +2,26 @@
 
 ### Objective
 
-[Explain here the objective of the milestone]
+Start learning the TypeScript language
 
 ### Timeline
 
 #### Duration
 
-- [ ] 1 week
+- [X] 1 week
 - [ ] 2 weeks
 - [ ] 3 weeks
 
 #### Date
 
-- Start date : [dd/mm/yyyy]
-- End date : [dd/mm/yyyy]
+- Start date : [12/04/2022]
+- End date : [19/04/2022]
 
 ### Checklist
 
-- [ ] Clear objective
-- [ ] Consistent objective
-- [ ] Achievable in the given time
+- [X] Clear objective
+- [X] Consistent objective
+- [X] Achievable in the given time
 - [ ] Issues created, with the rights labels and linked to this milestone
 - [ ] Issues assigned
 
@@ -31,15 +31,6 @@
 
 [Detail this week's report]
 
-### Week 2
-
-[Detail this week's report]\
-[If this milestone's duration is less than 2 weeks, please delete this section]
-
-### Week 3
-
-[Detail this week's report]\
-[If this milestone's duration is less than 3 weeks, please delete this section]
 
 ## Final Report
 
