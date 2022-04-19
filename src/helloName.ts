@@ -1,18 +1,17 @@
-const prompts = require('prompts')
+import prompts from "prompts";
 
-const askName = [
-    {
+
+const askName = async () : Promise<string> => {
+    const result = await prompts({
         type : 'text',
         name : 'value',
-        message: 'What is your name ?'
-    }
-];
+        message: 'What is your name ?',
+        validate: (test : string) => (test.length <= 0 ? 'Enter a valid name' : true)
+    });
+        return result.value;
+};
 
 export const helloName = async () => {
-    const result = await prompts(askName);
-    if (result.value === "") {
-        console.error("You should enter a valid name")
-    } else {
-        console.log("Hello " + result.value);
-    }
+    let name : string = await askName();
+    console.log("Hello " + name);
 };

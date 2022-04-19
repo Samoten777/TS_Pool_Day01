@@ -1,5 +1,5 @@
 type Artist = {
-    name: string
+    name: string;
 };
 
-export type {Artist};
+export default Artist;
