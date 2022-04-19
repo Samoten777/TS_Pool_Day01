@@ -1,3 +1,3 @@
-import { helloWorld } from "./helloWorld";
+import router from "./artistsBook/router";
 
-helloWorld()
+router();
