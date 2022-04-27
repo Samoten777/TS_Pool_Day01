@@ -1,4 +1,4 @@
-import displayView from "../../views/artists/display";
+import {displayView} from "../../views/artists/display";
 import getAll from "../../repositories/artists/get";
 
 function displayAll() {
