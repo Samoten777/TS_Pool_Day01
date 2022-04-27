@@ -1,20 +1,21 @@
-import fs from 'fs'
+import fs from 'fs';
 
-import Artist from '../../models/artist'
+import getAll from './get';
 
-import getAll from './get'
+import Artist from '../../models/artist';
 
-function repositoryCreate(name: string, callback: (found: boolean, err: NodeJS.ErrnoException) => void) {
-    const artists: Artist[] = getAll();
-    const newArtist: Artist = { name: name };
+function create(name: string, callback: (found: boolean, err: NodeJS.ErrnoException) => void) {
+  const artists = getAll();
+  const newArtist: Artist = { name };
 
-    if (artists.find(newArtist => newArtist.name === name))
-        callback(true, undefined);
-    else {
-        fs.writeFile('./src/artistsBook/data/artists.json', JSON.stringify(artists.concat(newArtist)), (err) => {
-            callback(false, err);
-        });
-    }
-};
+  if (artists.find((artist) => artist.name === name)) {
+    callback(true, undefined);
+    return;
+  }
 
-export default repositoryCreate;
+  fs.writeFile('./src/artistsBook/data/artists.json', JSON.stringify(artists.concat(newArtist)), (err) => {
+    callback(false, err);
+  });
+}
+
+export default create;

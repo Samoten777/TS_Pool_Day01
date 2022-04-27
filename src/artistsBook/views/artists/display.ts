@@ -12,6 +12,11 @@ function displayMessageCreated(name: string) {
     console.log();
 }
 
+function displayMessageUpdated(name: string, newName: string) {
+    console.log(name + " successfully updated to " + newName + ".");
+    console.log();
+}
+
 function displayMessageAlreadyExists(name: string) {
     console.log(name + " already exists!");
     console.log();
@@ -22,8 +27,22 @@ function displayMessageNotCreated(name: string) {
     console.log();
 }
 
+function displayMessageNotUpdated(name: string) {
+    console.log(name + " not updated.");
+    console.log();
+}
+
+function displayMessageNotFound(name: string) {
+    console.log(name + " not found.");
+    console.log();
+}
+
 export {
     displayView,
     displayMessageCreated,
+    displayMessageUpdated,
     displayMessageAlreadyExists,
-    displayMessageNotCreated};
+    displayMessageNotCreated,
+    displayMessageNotUpdated,
+    displayMessageNotFound
+};

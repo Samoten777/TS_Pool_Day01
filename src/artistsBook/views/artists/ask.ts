@@ -15,4 +15,11 @@ const askName = async () : Promise<string> => {
     return name;
 };
 
-export default askName;
+const askNewName = async (name: string) : Promise<string> => {
+    const newName = await askQuestion("What will be the new name of " + name + " ?");
+    return newName;
+}
+
+export {
+    askName,
+    askNewName};

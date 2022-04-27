@@ -1,6 +1,6 @@
 import repositoryCreate from '../../repositories/artists/create'
 
-import askName from '../../views/artists/ask';
+import {askName} from '../../views/artists/ask';
 
 import {
     displayMessageCreated,
