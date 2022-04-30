@@ -17,6 +17,11 @@ function displayMessageUpdated(name: string, newName: string) {
     console.log();
 }
 
+function displayMessageDeleted(name: string) {
+    console.log(name + " deleted from your favorite artists.");
+    console.log();
+}
+
 function displayMessageAlreadyExists(name: string) {
     console.log(name + " already exists!");
     console.log();
@@ -37,12 +42,19 @@ function displayMessageNotFound(name: string) {
     console.log();
 }
 
+function displayMessageNotDeleted(name: string) {
+    console.log(`${name} not deleted`);
+    console.log();
+}
+
 export {
     displayView,
     displayMessageCreated,
     displayMessageUpdated,
+    displayMessageDeleted,
     displayMessageAlreadyExists,
     displayMessageNotCreated,
     displayMessageNotUpdated,
-    displayMessageNotFound
+    displayMessageNotFound,
+    displayMessageNotDeleted
 };
