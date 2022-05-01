@@ -22,7 +22,7 @@ const nbActions: number = actions.length;
 
 const displayActions = (arr: string[]) => {
   console.log('What do you want to do?');
-  arr.forEach((action: string) => console.log(action));
+  arr.forEach((action) => console.log(action));
 };
 
 const getInput = async (): Promise<number> => {
@@ -36,8 +36,8 @@ const getInput = async (): Promise<number> => {
   return response.value;
 };
 
-const handleStatus = async (value: number) => {
-  switch (value) {
+const handleStatus = async (option: number) => {
+  switch (option) {
     case 1:
       displayAll();
       break;
@@ -65,11 +65,11 @@ const router = async () => {
     displayActions(actions);
 
     // eslint-disable-next-line no-await-in-loop
-    const status = await getInput();
+    const option = await getInput();
 
     clear();
     // eslint-disable-next-line no-await-in-loop
-    run = await handleStatus(status);
+    run = await handleStatus(option);
 
   }
   console.log();

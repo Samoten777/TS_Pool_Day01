@@ -3,7 +3,13 @@ import fs from 'fs';
 import getAll from './get';
 
 // eslint-disable-next-line no-unused-vars
-function update(name: string, newName: string, callback: (found: boolean, err: NodeJS.ErrnoException) => void) {
+function update(
+    name: string,
+    newName: string,
+    music: string,
+    nbFans: number,
+    listenedTime: number,
+    callback: (found: boolean, err: NodeJS.ErrnoException) => void) {
     const artists = getAll();
 
     let found = false;
@@ -18,6 +24,9 @@ function update(name: string, newName: string, callback: (found: boolean, err: N
         if (artist.name === name) {
             found = true;
             artist.name = newName;
+            artist.mostPopularMusic = music;
+            artist.nbFans = nbFans;
+            artist.listenedTime = listenedTime;
         }
         return artist;
     });

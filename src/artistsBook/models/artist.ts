@@ -1,5 +1,9 @@
 type Artist = {
-    name: string;
+    id: string,
+    name: string,
+    mostPopularMusic: string,
+    nbFans: number,
+    listenedTime: number
 };
 
 export default Artist;

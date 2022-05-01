@@ -1,12 +1,19 @@
+import { nanoid } from 'nanoid';
+
 import fs from 'fs';
 
 import getAll from './get';
 
 import Artist from '../../models/artist';
 
-function create(name: string, callback: (found: boolean, err: NodeJS.ErrnoException) => void) {
+function create(
+  name: string,
+  mostPopularMusic: string,
+  nbFans: number,
+  listenedTime: number,
+  callback: (found: boolean, err: NodeJS.ErrnoException) => void) {
   const artists = getAll();
-  const newArtist: Artist = { name };
+  const newArtist: Artist = { id: nanoid(), name, mostPopularMusic, nbFans, listenedTime };
 
   if (artists.find((artist) => artist.name === name)) {
     callback(true, undefined);

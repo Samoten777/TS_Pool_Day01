@@ -1,6 +1,11 @@
 import repositoryCreate from '../../repositories/artists/create'
 
-import {askName} from '../../views/artists/ask';
+import {
+    askName,
+    askMostPopularMusic,
+    askNbFans,
+    askListenTime
+} from '../../views/artists/ask';
 
 import {
     displayMessageCreated,
@@ -9,16 +14,19 @@ import {
 } from '../../views/artists/display';
 
 const create = async () => {
-    const artistName = await askName();
+    const name = await askName();
+    const music = await askMostPopularMusic(name);
+    const nbFans = await askNbFans(name);
+    const listenedTime = await askListenTime(name);
 
-    repositoryCreate(artistName, (found, err) => {
+    repositoryCreate(name, music, nbFans, listenedTime, (found, err) => {
         if(err) {
-            displayMessageNotCreated(artistName);
+            displayMessageNotCreated(name);
             console.error(err);
         } else if(found)
-            displayMessageAlreadyExists(artistName);
+            displayMessageAlreadyExists(name);
         else
-            displayMessageCreated(artistName);
+            displayMessageCreated(name);
     });
 }
 

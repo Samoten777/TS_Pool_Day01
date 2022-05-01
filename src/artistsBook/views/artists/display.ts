@@ -3,8 +3,13 @@ import Artist from "../../models/artist";
 function displayView(all : Artist[]) {
     console.log();
     console.log("Here's your favorite artists:");
-    all.forEach((artist, index) => console.log("-- " + (index + 1) + " -- " + artist.name));
-    console.log();
+    all.forEach((artist, index) => {
+        console.log(`-- ${index + 1} -- ${artist.name}`);
+        console.log(`\tMost popular music: ${artist.mostPopularMusic}`);
+        console.log(`\tFan count: ${artist.nbFans}`);
+        console.log(`\tListen time: ${artist.listenedTime}`);
+        console.log();
+    });
 }
 
 function displayMessageCreated(name: string) {
