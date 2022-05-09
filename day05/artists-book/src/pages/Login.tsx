@@ -1,5 +1,5 @@
 import { VStack, Heading, Input, InputGroup, InputRightElement, Text, Button, Link } from '@chakra-ui/react';
-import { Link as ReactRouterLink } from 'react-router-dom';
+import { Link as ReactRouterLink, useNavigate } from 'react-router-dom';
 import React from 'react';
 
 const LoginPage = (): JSX.Element => {
@@ -7,6 +7,7 @@ const LoginPage = (): JSX.Element => {
 	const [email, setEmail] = React.useState('');
 	const [password, setPassword] = React.useState('');
 	const handleShow = () => setShow(!show);
+	const navigate = useNavigate();
 
 	return (
 		<VStack spacing="2%">
@@ -29,18 +30,19 @@ const LoginPage = (): JSX.Element => {
 					</InputRightElement>
 				</InputGroup>
 				<Button
-					id='login-button'
+					id="login-button"
 					type="submit"
 					variant="solid"
 					onClick={() => {
 						console.log(`Email: ${email}\nPassword: ${password}`);
+						navigate('/dashboard');
 					}}
 				>
 					Log in
 				</Button>
 				<Text align="center">
 					No account yet?{' '}
-					<Button variant='link' id='login-to-register-button'>
+					<Button variant="link" id="login-to-register-button">
 						<Link as={ReactRouterLink} color="teal.500" to="/register">
 							Create a new account.
 						</Link>
